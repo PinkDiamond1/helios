@@ -3,7 +3,7 @@ import Message from '@fluent-wallet/component-message'
 import {CheckCircleFilled} from '@fluent-wallet/component-icons'
 import {RPC_METHODS} from '../constants'
 import {request} from '../utils'
-import {useCfxNetwork, useCurrentAddress} from '../hooks/useApi'
+import {useNetwork, useCurrentAddress} from '../hooks/useApi'
 import useLoading from '../hooks/useLoading'
 import {CustomTag} from './'
 import {useTranslation} from 'react-i18next'
@@ -142,7 +142,7 @@ function NetworkContent({
   onClose,
   ...props
 }) {
-  const networkData = useCfxNetwork()
+  const networkData = useNetwork()
 
   return (
     <>
